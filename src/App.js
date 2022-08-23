@@ -6,6 +6,7 @@ import Pricing from './components/Pricing';
 import NavBar from './components/NavBar';
 import Preet from './components/Preet';
 import ErrorPage from './components/ErrorPage';
+import Choice from './components/Choice';
 
 
 const App = ()=> {
@@ -31,7 +32,9 @@ const App = ()=> {
       <Route path='/about' element={<About/>}/>
       <Route path='/pricing' element={<Pricing prices={pricing}/>}/>
       <Route path='/preet' element={<Preet/>}/>
-      <Route path='*' element={<ErrorPage/>}/>
+      <Route path='/choices/:choice' element={<Choice/>}/>
+      <Route path='*' element={<ErrorPage/>}/> 
+      {/* // you have to use the default route last as it goes by code */}
 
 
       
